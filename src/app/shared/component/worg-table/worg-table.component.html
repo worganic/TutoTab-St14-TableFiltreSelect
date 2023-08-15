@@ -1,0 +1,63 @@
+<div *ngIf="tableOption">
+    <div class="container">
+        <div class="row" style="margin-left:20px;">
+            <div class="col infosMaj">
+                Réactualisation des données dans : <b>{{ time }}</b> secondes.
+            </div>
+            <div class="col">
+                <button mat-raised-button (click)="majDonnees()">
+                    MAJ donnees manuel
+                </button>
+            </div>
+        </div>
+        <div class="row" style="margin-left:20px;">
+            <div class="col">
+                <span class="infosActu" *ngIf="infoActualisation">Les données viennent d'être mise à jour.</span>
+            </div>
+        </div>
+    </div>
+    <form [formGroup]="form">
+    <table class="table tableCustom table-striped">
+        <thead class="tableTheadCustom">
+            <tr>
+                <th scope="col" *ngFor="let column of findHiddenFalse(Listecolumns)">{{ column.columnTitle }}</th>
+            </tr>
+        </thead>
+        <thead class="tableFilterCustom">
+            <tr>
+               
+                    <th scope="col" *ngFor="let column of findHiddenFalse(Listecolumns)">
+                        <div *ngIf="column.filter">
+                            <div *ngIf="column.filterType == 'text'">
+                                <input
+                                    formControlName="{{ column.column }}"
+                                    type="text"
+                                    class="form-control-input filter"
+                                    id="search-{{ column.columnTitle }}"
+                                (keyup)="filterKeyEvent()"
+                            />
+                            </div>
+                            <div *ngIf="column.filterType == 'select'">
+                                <select formControlName="{{ column.column }}"
+                                    class="form-control-input selected"
+                                    id="search-{{ column.columnTitle }}"
+                                    [(ngModel)]='trest'
+                                    (change)="filterKeyEvent()"
+                                    >
+                                    <option value="{{ element }}" *ngFor="let element of column.filterSelectData ">{{ element }}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of viewData" class="tableRow">
+                <!--<th scope="row">{{ user.id }}</th>-->
+                <td *ngFor="let column of findHiddenFalse(Listecolumns)">{{ user[column.column] }}</td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+</div>

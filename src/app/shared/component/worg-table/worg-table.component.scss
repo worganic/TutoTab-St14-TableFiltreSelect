@@ -1,0 +1,31 @@
+/* Custom table */
+.tableCustom{
+    --bs-table-color: var(--main-content-text-color) !important;
+    --bs-table-bg:: var(--main-content-background-color) !important;
+    --bs-table-striped-color:  var(--table-thead-striped-color) !important;
+    --bs-table-striped-bg:  var(--table-thead-striped-background-color) !important;
+  }
+  .tableTheadCustom{
+    --bs-table-color: var(--table-thead-color) !important;
+    --bs-table-bg: var(--table-thead-background-color) !important;
+  }
+  .tableFilterCustom{
+    --bs-table-color: var(--table-thead-color) !important;
+    --bs-table-bg: var(--table-thead-filter-background-color) !important;
+  }
+  /* Custom table actualisation */
+  .infosActu{
+    font-size: 0.7em;
+    color: var(--table-thead-background-color);
+    font-weight: bold;
+  }
+  .infosMaj{
+    font-size: 0.8em;
+  }
+
+//
+.table .tableFilterCustom .filter{
+  width: 100%;
+  border:1px solid #000000;
+  font-size: 0.9em;
+}

@@ -1,0 +1,111 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "duncan",
+      "firstName": "firstDuncan",
+      "lastName": "lastDuncan",
+      "country": "australia",
+      "age": 27,
+      "password": "123",
+      "sexe": "Homme"
+    },
+    {
+      "id": 2,
+      "username": "sarah",
+      "firstName": "sahra",
+      "lastName": "Labiboche",
+      "country": "england",
+      "password": "123",
+      "age": 27,
+      "sexe": "Femme"
+    },
+    {
+      "id": 3,
+      "username": "Abi",
+      "firstName": "Abigaelddd",
+      "lastName": "Lololo",
+      "country": "usa11",
+      "password": "11",
+      "age": 13,
+      "sexe": "Femme"
+    },
+    {
+      "username": "lolotte",
+      "firstName": "Charlotte",
+      "lastName": "LeNomDeFAm",
+      "password": "1235555",
+      "id": 4,
+      "age": 21,
+      "sexe": "Homme"
+    },
+    {
+      "username": "worg",
+      "firstName": "Johann",
+      "lastName": "Loreau",
+      "password": "654321",
+      "id": 5,
+      "age": 50,
+      "sexe": "Homme"
+    },
+    {
+      "username": "Obor",
+      "firstName": "Caroline",
+      "lastName": "Martinez",
+      "password": "987654",
+      "id": 6,
+      "age": 45,
+      "sexe": "Femme"
+    }
+
+  ],
+  "profiles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "job": "Plumber"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "job": "developer"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "job": "Manager"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Spanner",
+      "category": "tools"
+    },
+    {
+      "id": 2,
+      "name": "Hammer",
+      "category": "tools"
+    },
+    {
+      "id": 3,
+      "name": "Screw driver",
+      "category": "tools"
+    },
+    {
+      "id": 4,
+      "name": "Paint brush",
+      "category": "paint"
+    },
+    {
+      "id": 5,
+      "name": "Paint roller",
+      "category": "paint"
+    },
+    {
+      "id": 6,
+      "name": "Paint",
+      "category": "paint"
+    }
+  ]
+}
